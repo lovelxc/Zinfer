@@ -1,0 +1,11 @@
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+
+build/
+
+*.o
+*.obj
+*.so
+*.exe
