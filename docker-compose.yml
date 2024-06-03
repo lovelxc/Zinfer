@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  zinfer:
+    image: zinfer/zinfer:1.0
+    tty: true
+    volumes:
+      - ./:/app
+    ports:
+      - "15888:22"
+    entrypoint: /bin/bash /app/entrypoint.sh
