@@ -1,0 +1,45 @@
+{
+    "clangd.checkUpdates": true,
+    "clangd.arguments": [
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "-j=4",
+        "--query-driver=/usr/bin/clang++",
+        "--clang-tidy",
+        "--all-scopes-completion",
+        "--completion-style=detailed",
+        "--pch-storage=disk"
+    ],
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "googletest.failed",
+                "settings": {
+                    "foreground": "#f00"
+                }
+            },
+            {
+                "scope": "googletest.passed",
+                "settings": {
+                    "foreground": "#0f0"
+                }
+            },
+            {
+                "scope": "googletest.run",
+                "settings": {
+                    "foreground": "#0f0"
+                }
+            }
+        ]
+    },
+    "testMate.cpp.test.advancedExecutables": [
+        {
+          "pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*",
+          "cwd": "${absDirpath}",
+          "env": {
+            "ExampleENV1": "You can use variables here too, like ${relPath}",
+            "PATH": "${os_env:PATH}${osPathEnvSep}/adding/new/item/to/PATH/env"
+          }
+        }
+    ]
+}
